@@ -18,4 +18,12 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
+
+	names := []string{"Gladys", "Samantha", "Darrin"}
+
+	messages, errs := greetings.Hellos(names)
+	if errs != nil {
+		log.Fatal(errs)
+	}
+	fmt.Println(messages)
 }
